@@ -132,13 +132,16 @@ class NNPredict:
             datum.append(u[j])
     
         if self.driven:
-            #pwm x n    : drive or driven
-            if pwmXn==0:
-                pwmXn= np.sign(u[-1]*n[-1])
-                pwmXn=self.pwmXn_old
-            else:
-                self.pwmXn_old=pwmXn
-            datum.append(pwmXn)    
+            self.pwmXn= np.sign(u[-1]*n[-1])
+            datum.append(pwmXn) 
+            
+#            #pwm x n    : drive or driven
+#            if pwmXn==0:
+#                pwmXn= np.sign(u[-1]*n[-1])
+#                pwmXn=self.pwmXn_old
+#            else:
+#                self.pwmXn_old=pwmXn
+#            datum.append(pwmXn)    
         
 #        if self.power_direction:
 #            powerd=np.sign(self.linearModel_dcx22(n[-1]*self.n_factor,u[-1]*self.pwm_factor))
@@ -516,6 +519,7 @@ class NNPredict:
         
         plt.xlabel('PWM Value')
         plt.ylabel('T')
+        plt.title('slice at speed:'+str(n))
         plt.legend()
         
     def train_model(self, EPOCHS_):  

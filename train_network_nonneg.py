@@ -10,9 +10,11 @@ Created on Fri May 17 18:51:19 2019
 ##nnpredict.predict([1]*2,[1]*2)
 #nnpredict.train_model(1000)
 
+import class_nn_T_prediction_nonneg_2_hard_sigmoid as nnp
 
-#import class_nn_T_prediction_monoton_02_5xn as nnp
-nnpredict=NNPredict()
-#nnpredict=nnp.NNPredict()
-nnpredict.loaddatafromfile()
+#nnpredict=NNPredict()
+nnpredict=nnp.NNPredict()
+
+nnpredict.loaddatafromfile() #load form "datasave.pickle" #otherwise the data is loaded from the files specified in "class_nn_T_prediction_nonneg_2_hard_sigmoid.py", that takes a little bit of time
+
 nnpredict.train_model(10)
