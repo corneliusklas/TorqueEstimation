@@ -1,0 +1,67 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri May 17 18:51:19 2019
+
+@author: cklas
+"""
+
+#import class_nn_T_prediction_13_Delta_simple as nnp
+#nnpredict=nnp.NNPredict()
+##nnpredict.predict([1]*2,[1]*2)
+#nnpredict.train_model(1000)
+
+
+#import class_nn_T_prediction_monoton_02_5xn as nnp
+nnpredict=NNPredict(datasave)
+#nnpredict=nnp.NNPredict()
+#nnpredict.loaddatafromfile
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.9)
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.0)
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.9)
+nnpredict.train_model(100)
+nnpredict.model_T=nnpredict.build_model(0.0)
+nnpredict.train_model(100)
+nnpredict.model_T=nnpredict.build_model(0.8)
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.0)
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.7)
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.0)
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.6)
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.0)
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.5)
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.0)
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.4)
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.0)
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.3)
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.0)
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.2)
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.0)
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.1)
+nnpredict.train_model(10)
+nnpredict.model_T=nnpredict.build_model(0.0)
+nnpredict.train_model(100)
+nnpredict.model_T=nnpredict.build_model(0.01)
+nnpredict.train_model(50)
+nnpredict.model_T=nnpredict.build_model(0.0)
+nnpredict.train_model(100)
+nnpredict.model_T=nnpredict.build_model(0.01)
+nnpredict.train_model(50)
+nnpredict.model_T=nnpredict.build_model(0.0)
+nnpredict.train_model(100)
+nnpredict.plot_model()
